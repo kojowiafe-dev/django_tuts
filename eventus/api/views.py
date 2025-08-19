@@ -210,4 +210,4 @@ def delete_announcements(request, pk):
         serializedData = AnnouncementsSerializers(announcements).data
     except not Announcements.objects.get(pk=pk).exists():
         return Response({"error": "Announcement not found"}, status=status.HTTP_404_NOT_FOUND)
-    return Response({"message": "Announcement deleted sucessfully"}, status=status.HTTP_204_NO_CONTENT)
+    return Response({"message": "Announcement deleted successfully"}, status=status.HTTP_204_NO_CONTENT)
